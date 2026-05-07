@@ -1,0 +1,16 @@
+.PHONY: build run test clean
+
+build:
+	go build -o bin/pgwatch-copilot ./cmd/main.go
+
+run:
+	go run ./cmd/main.go ask "$(Q)"
+
+test:
+	go test ./...
+
+clean:
+	rm -rf bin/
+
+tidy:
+	go mod tidy

@@ -18,7 +18,7 @@ type MetricSignal struct {
 
 func TrendFromAnomaly(score float64) string {
 	switch {
-	case score > 0.5:
+	case score >= 0.5:
 		return "spike"
 	case score < -0.3:
 		return "declining"
